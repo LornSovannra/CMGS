@@ -211,5 +211,14 @@
   <ItemGroup>
     <None Include="Resources\Close_512px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_arrow_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_arrow_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_arrow_32px_new.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

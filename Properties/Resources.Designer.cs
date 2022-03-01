@@ -93,6 +93,26 @@ namespace Computer_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap collapse_arrow_32px {
+            get {
+                object obj = ResourceManager.GetObject("collapse_arrow_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap collapse_arrow_32px_new {
+            get {
+                object obj = ResourceManager.GetObject("collapse_arrow_32px_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_32px {
             get {
                 object obj = ResourceManager.GetObject("customer_32px", resourceCulture);
@@ -116,6 +136,16 @@ namespace Computer_MGS.Properties {
         internal static System.Drawing.Bitmap delete_shield_128px {
             get {
                 object obj = ResourceManager.GetObject("delete_shield_128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expand_arrow_32px {
+            get {
+                object obj = ResourceManager.GetObject("expand_arrow_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

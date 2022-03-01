@@ -121,17 +121,26 @@
   <data name="sale_32px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sale_32px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Close_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="staff_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\staff_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sale_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sale_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="expand_arrow_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expand_arrow_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dashboard_32_Newpx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_32_Newpx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="categorize_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\categorize_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="collapse_arrow_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collapse_arrow_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="supplier_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\supplier_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +169,7 @@
   <data name="customer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Close_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="collapse_arrow_32px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collapse_arrow_32px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

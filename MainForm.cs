@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Oracle.ManagedDataAccess.Client;
+using Computer_MGS.Properties;
 
 namespace Computer_MGS
 {
@@ -90,16 +91,6 @@ namespace Computer_MGS
             OpenChildForm(new Forms.ComputerForm(), sender);
         }
 
-        private void btnSale_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.SaleForm(), sender);
-        }
-
-        private void btnPurchase_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.PurchaseForm(), sender);
-        }
-
         private void btnCategory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.CategoryForm(), sender);
@@ -137,5 +128,69 @@ namespace Computer_MGS
                 Application.Exit();
             }
         }
+
+        private bool isSalesCollapsed;
+
+        private void salesDropDownTimer_Tick(object sender, EventArgs e)
+        {
+            if (isSalesCollapsed)
+            {
+                btnAboutSales.Image = Resources.collapse_arrow_32px_new;
+                pnSalesDropDown.Height += 10;
+                if(pnSalesDropDown.Size == pnSalesDropDown.MaximumSize)
+                {
+                    salesDropDownTimer.Stop();
+                    isSalesCollapsed = false;
+                }
+            }
+            else
+            {
+                btnAboutSales.Image = Resources.expand_arrow_32px;
+                pnSalesDropDown.Height -= 10;
+                if (pnSalesDropDown.Size == pnSalesDropDown.MinimumSize)
+                {
+                    salesDropDownTimer.Stop();
+                    isSalesCollapsed = true;
+                }
+            }
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            salesDropDownTimer.Start();
+        }
+
+        private bool isPurchasesCollapsed;
+
+        private void purchasesDropDownTimer_Tick(object sender, EventArgs e)
+        {
+            if (isPurchasesCollapsed)
+            {
+                btnAboutPurchases.Image = Resources.collapse_arrow_32px_new;
+                pnPurchasesDropDown.Height += 10;
+                if (pnPurchasesDropDown.Size == pnPurchasesDropDown.MaximumSize)
+                {
+                    purchasesDropDownTimer.Stop();
+                    isPurchasesCollapsed = false;
+                }
+            }
+            else
+            {
+                btnAboutPurchases.Image = Resources.expand_arrow_32px;
+                pnPurchasesDropDown.Height -= 10;
+                if (pnPurchasesDropDown.Size == pnPurchasesDropDown.MinimumSize)
+                {
+                    purchasesDropDownTimer.Stop();
+                    isPurchasesCollapsed = true;
+                }
+            }
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            purchasesDropDownTimer.Start();
+        }
+
+        
     }
 }
