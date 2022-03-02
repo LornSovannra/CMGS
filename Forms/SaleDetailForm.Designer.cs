@@ -1,7 +1,7 @@
 ﻿
 namespace Computer_MGS.Forms
 {
-    partial class SaleForm
+    partial class SaleDetailForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,27 +31,29 @@ namespace Computer_MGS.Forms
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtStaffID = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtpSaleDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbCustomerID = new System.Windows.Forms.ComboBox();
+            this.cbComputerID = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSaleID = new System.Windows.Forms.TextBox();
+            this.txtQtySales = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMakeReport = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.rtbRemark = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dgvSale = new System.Windows.Forms.DataGridView();
+            this.dgvSaleDetail = new System.Windows.Forms.DataGridView();
+            this.cbSaleID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,87 +63,59 @@ namespace Computer_MGS.Forms
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "MANAGE YOUR SALE";
+            this.label1.Size = new System.Drawing.Size(419, 31);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "MANAGE YOUR SALE DETAIL\r\n";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.txtStaffID);
+            this.panel1.Controls.Add(this.cbSaleID);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.rtbRemark);
+            this.panel1.Controls.Add(this.txtDiscount);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.dtpSaleDate);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.cbCustomerID);
+            this.panel1.Controls.Add(this.cbComputerID);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtSaleID);
-            this.panel1.Location = new System.Drawing.Point(12, 53);
+            this.panel1.Controls.Add(this.txtQtySales);
+            this.panel1.Location = new System.Drawing.Point(12, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(849, 100);
-            this.panel1.TabIndex = 2;
-            // 
-            // txtStaffID
-            // 
-            this.txtStaffID.Enabled = false;
-            this.txtStaffID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStaffID.Location = new System.Drawing.Point(95, 58);
-            this.txtStaffID.Name = "txtStaffID";
-            this.txtStaffID.Size = new System.Drawing.Size(284, 26);
-            this.txtStaffID.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(407, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 20);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Sale Date";
-            // 
-            // dtpSaleDate
-            // 
-            this.dtpSaleDate.CustomFormat = "dd-MMM-yy";
-            this.dtpSaleDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpSaleDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSaleDate.Location = new System.Drawing.Point(551, 56);
-            this.dtpSaleDate.Name = "dtpSaleDate";
-            this.dtpSaleDate.Size = new System.Drawing.Size(284, 26);
-            this.dtpSaleDate.TabIndex = 22;
+            this.panel1.Size = new System.Drawing.Size(892, 100);
+            this.panel1.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(16, 61);
+            this.label3.Location = new System.Drawing.Point(355, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Staff ID";
+            this.label3.Text = "Qty Sales";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(407, 15);
+            this.label4.Location = new System.Drawing.Point(14, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 20);
+            this.label4.Size = new System.Drawing.Size(111, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Customer ID";
+            this.label4.Text = "Computer ID";
             // 
-            // cbCustomerID
+            // cbComputerID
             // 
-            this.cbCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCustomerID.FormattingEnabled = true;
-            this.cbCustomerID.Location = new System.Drawing.Point(551, 12);
-            this.cbCustomerID.Name = "cbCustomerID";
-            this.cbCustomerID.Size = new System.Drawing.Size(284, 28);
-            this.cbCustomerID.TabIndex = 4;
-            this.cbCustomerID.SelectedIndexChanged += new System.EventHandler(this.cbCustomerID_SelectedIndexChanged);
+            this.cbComputerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbComputerID.FormattingEnabled = true;
+            this.cbComputerID.Location = new System.Drawing.Point(131, 58);
+            this.cbComputerID.Name = "cbComputerID";
+            this.cbComputerID.Size = new System.Drawing.Size(205, 28);
+            this.cbComputerID.TabIndex = 4;
+            this.cbComputerID.SelectedIndexChanged += new System.EventHandler(this.cbComputerID_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -154,14 +128,34 @@ namespace Computer_MGS.Forms
             this.label2.TabIndex = 1;
             this.label2.Text = "Sale ID";
             // 
-            // txtSaleID
+            // txtQtySales
             // 
-            this.txtSaleID.Enabled = false;
-            this.txtSaleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaleID.Location = new System.Drawing.Point(95, 12);
-            this.txtSaleID.Name = "txtSaleID";
-            this.txtSaleID.Size = new System.Drawing.Size(284, 26);
-            this.txtSaleID.TabIndex = 0;
+            this.txtQtySales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtySales.Location = new System.Drawing.Point(447, 12);
+            this.txtQtySales.Name = "txtQtySales";
+            this.txtQtySales.Size = new System.Drawing.Size(205, 26);
+            this.txtQtySales.TabIndex = 0;
+            this.txtQtySales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtySales_KeyPress);
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscount.Location = new System.Drawing.Point(447, 58);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(205, 26);
+            this.txtDiscount.TabIndex = 26;
+            this.txtDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiscount_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(355, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 20);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Discount";
             // 
             // panel2
             // 
@@ -170,10 +164,10 @@ namespace Computer_MGS.Forms
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnCreate);
-            this.panel2.Location = new System.Drawing.Point(867, 53);
+            this.panel2.Location = new System.Drawing.Point(910, 55);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 100);
-            this.panel2.TabIndex = 3;
+            this.panel2.Size = new System.Drawing.Size(274, 100);
+            this.panel2.TabIndex = 4;
             // 
             // btnMakeReport
             // 
@@ -182,7 +176,7 @@ namespace Computer_MGS.Forms
             this.btnMakeReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMakeReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMakeReport.ForeColor = System.Drawing.Color.White;
-            this.btnMakeReport.Location = new System.Drawing.Point(197, 54);
+            this.btnMakeReport.Location = new System.Drawing.Point(154, 53);
             this.btnMakeReport.Name = "btnMakeReport";
             this.btnMakeReport.Size = new System.Drawing.Size(117, 43);
             this.btnMakeReport.TabIndex = 20;
@@ -197,9 +191,9 @@ namespace Computer_MGS.Forms
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(115, 55);
+            this.btnDelete.Location = new System.Drawing.Point(82, 54);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(76, 42);
+            this.btnDelete.Size = new System.Drawing.Size(66, 42);
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -212,9 +206,9 @@ namespace Computer_MGS.Forms
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(3, 54);
+            this.btnUpdate.Location = new System.Drawing.Point(4, 54);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(106, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(72, 43);
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -227,23 +221,42 @@ namespace Computer_MGS.Forms
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(3, 3);
+            this.btnCreate.Location = new System.Drawing.Point(4, 2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(311, 46);
+            this.btnCreate.Size = new System.Drawing.Size(267, 46);
             this.btnCreate.TabIndex = 17;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // rtbRemark
+            // 
+            this.rtbRemark.Location = new System.Drawing.Point(672, 35);
+            this.rtbRemark.Name = "rtbRemark";
+            this.rtbRemark.Size = new System.Drawing.Size(207, 51);
+            this.rtbRemark.TabIndex = 27;
+            this.rtbRemark.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(668, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Remark";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.txtSearch);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(12, 159);
+            this.panel3.Location = new System.Drawing.Point(12, 161);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1172, 50);
-            this.panel3.TabIndex = 4;
+            this.panel3.TabIndex = 5;
             // 
             // txtSearch
             // 
@@ -265,43 +278,53 @@ namespace Computer_MGS.Forms
             this.label9.TabIndex = 17;
             this.label9.Text = "Search";
             // 
-            // dgvSale
+            // dgvSaleDetail
             // 
-            this.dgvSale.AllowUserToAddRows = false;
-            this.dgvSale.AllowUserToDeleteRows = false;
-            this.dgvSale.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSale.BackgroundColor = System.Drawing.Color.White;
-            this.dgvSale.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSale.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgvSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSale.Location = new System.Drawing.Point(12, 215);
-            this.dgvSale.Name = "dgvSale";
-            this.dgvSale.ReadOnly = true;
-            this.dgvSale.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvSale.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSale.Size = new System.Drawing.Size(1172, 499);
-            this.dgvSale.TabIndex = 5;
-            this.dgvSale.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSale_CellClick);
+            this.dgvSaleDetail.AllowUserToAddRows = false;
+            this.dgvSaleDetail.AllowUserToDeleteRows = false;
+            this.dgvSaleDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSaleDetail.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSaleDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSaleDetail.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvSaleDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSaleDetail.Location = new System.Drawing.Point(12, 217);
+            this.dgvSaleDetail.Name = "dgvSaleDetail";
+            this.dgvSaleDetail.ReadOnly = true;
+            this.dgvSaleDetail.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvSaleDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSaleDetail.Size = new System.Drawing.Size(1172, 499);
+            this.dgvSaleDetail.TabIndex = 6;
+            this.dgvSaleDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaleDetail_CellClick);
             // 
-            // SaleForm
+            // cbSaleID
+            // 
+            this.cbSaleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSaleID.FormattingEnabled = true;
+            this.cbSaleID.Location = new System.Drawing.Point(131, 12);
+            this.cbSaleID.Name = "cbSaleID";
+            this.cbSaleID.Size = new System.Drawing.Size(205, 28);
+            this.cbSaleID.TabIndex = 29;
+            this.cbSaleID.SelectedIndexChanged += new System.EventHandler(this.cbSaleID_SelectedIndexChanged);
+            // 
+            // SaleDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1196, 726);
-            this.Controls.Add(this.dgvSale);
+            this.Controls.Add(this.dgvSaleDetail);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Name = "SaleForm";
-            this.Text = "SaleForm";
-            this.Load += new System.EventHandler(this.SaleForm_Load);
+            this.Name = "SaleDetailForm";
+            this.Text = "SaleDetailForm";
+            this.Load += new System.EventHandler(this.SaleDetailForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,22 +334,24 @@ namespace Computer_MGS.Forms
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbCustomerID;
+        private System.Windows.Forms.ComboBox cbComputerID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSaleID;
+        private System.Windows.Forms.TextBox txtQtySales;
+        private System.Windows.Forms.TextBox txtDiscount;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnMakeReport;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpSaleDate;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox rtbRemark;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dgvSale;
-        private System.Windows.Forms.TextBox txtStaffID;
+        private System.Windows.Forms.DataGridView dgvSaleDetail;
+        private System.Windows.Forms.ComboBox cbSaleID;
     }
 }

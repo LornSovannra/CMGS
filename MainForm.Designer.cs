@@ -32,18 +32,21 @@ namespace Computer_MGS
             this.components = new System.ComponentModel.Container();
             this.pnDesktop = new System.Windows.Forms.Panel();
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.pbMinimize = new System.Windows.Forms.PictureBox();
+            this.pbMaximize = new System.Windows.Forms.PictureBox();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanelNavigation = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnComputer = new System.Windows.Forms.Button();
             this.pnSalesDropDown = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSaleDetail = new System.Windows.Forms.Button();
+            this.btnSale = new System.Windows.Forms.Button();
             this.btnAboutSales = new System.Windows.Forms.Button();
             this.pnPurchasesDropDown = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnPurchaseDetail = new System.Windows.Forms.Button();
+            this.btnPurchase = new System.Windows.Forms.Button();
             this.btnAboutPurchases = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnMember = new System.Windows.Forms.Button();
@@ -54,7 +57,14 @@ namespace Computer_MGS
             this.salesDropDownTimer = new System.Windows.Forms.Timer(this.components);
             this.purchasesDropDownTimer = new System.Windows.Forms.Timer(this.components);
             this.pbExit = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnDesktop.SuspendLayout();
+            this.pnHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.flowLayoutPanelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnSalesDropDown.SuspendLayout();
@@ -75,6 +85,12 @@ namespace Computer_MGS
             // pnHeader
             // 
             this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.pnHeader.Controls.Add(this.label4);
+            this.pnHeader.Controls.Add(this.label3);
+            this.pnHeader.Controls.Add(this.label2);
+            this.pnHeader.Controls.Add(this.pbMinimize);
+            this.pnHeader.Controls.Add(this.pbMaximize);
+            this.pnHeader.Controls.Add(this.pbClose);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(219, 0);
             this.pnHeader.Name = "pnHeader";
@@ -83,6 +99,39 @@ namespace Computer_MGS
             this.pnHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseDown);
             this.pnHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseMove);
             this.pnHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseUp);
+            // 
+            // pbMinimize
+            // 
+            this.pbMinimize.Image = global::Computer_MGS.Properties.Resources.subtract_60px;
+            this.pbMinimize.Location = new System.Drawing.Point(1077, 18);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(31, 30);
+            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMinimize.TabIndex = 45;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
+            // 
+            // pbMaximize
+            // 
+            this.pbMaximize.Image = global::Computer_MGS.Properties.Resources.full_screen_60px;
+            this.pbMaximize.Location = new System.Drawing.Point(1114, 18);
+            this.pbMaximize.Name = "pbMaximize";
+            this.pbMaximize.Size = new System.Drawing.Size(31, 30);
+            this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMaximize.TabIndex = 44;
+            this.pbMaximize.TabStop = false;
+            this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click);
+            // 
+            // pbClose
+            // 
+            this.pbClose.Image = global::Computer_MGS.Properties.Resources.Close_64px;
+            this.pbClose.Location = new System.Drawing.Point(1151, 18);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(31, 30);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 43;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
             // flowLayoutPanelNavigation
             // 
@@ -145,6 +194,7 @@ namespace Computer_MGS
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnComputer
             // 
@@ -164,12 +214,13 @@ namespace Computer_MGS
             this.btnComputer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComputer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnComputer.UseVisualStyleBackColor = false;
+            this.btnComputer.Click += new System.EventHandler(this.btnComputer_Click);
             // 
             // pnSalesDropDown
             // 
             this.pnSalesDropDown.BackColor = System.Drawing.Color.White;
-            this.pnSalesDropDown.Controls.Add(this.button2);
-            this.pnSalesDropDown.Controls.Add(this.button1);
+            this.pnSalesDropDown.Controls.Add(this.btnSaleDetail);
+            this.pnSalesDropDown.Controls.Add(this.btnSale);
             this.pnSalesDropDown.Controls.Add(this.btnAboutSales);
             this.pnSalesDropDown.Location = new System.Drawing.Point(3, 195);
             this.pnSalesDropDown.MaximumSize = new System.Drawing.Size(218, 134);
@@ -178,43 +229,45 @@ namespace Computer_MGS
             this.pnSalesDropDown.Size = new System.Drawing.Size(218, 54);
             this.pnSalesDropDown.TabIndex = 41;
             // 
-            // button2
+            // btnSaleDetail
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Computer_MGS.Properties.Resources.sale_32px_new;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 95);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(218, 41);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "  &Sale Detail";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSaleDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.btnSaleDetail.FlatAppearance.BorderSize = 0;
+            this.btnSaleDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaleDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaleDetail.ForeColor = System.Drawing.Color.White;
+            this.btnSaleDetail.Image = global::Computer_MGS.Properties.Resources.sale_32px_new;
+            this.btnSaleDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaleDetail.Location = new System.Drawing.Point(0, 95);
+            this.btnSaleDetail.Name = "btnSaleDetail";
+            this.btnSaleDetail.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSaleDetail.Size = new System.Drawing.Size(218, 41);
+            this.btnSaleDetail.TabIndex = 35;
+            this.btnSaleDetail.Text = "  &Sale Detail";
+            this.btnSaleDetail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaleDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSaleDetail.UseVisualStyleBackColor = false;
+            this.btnSaleDetail.Click += new System.EventHandler(this.btnSaleDetail_Click);
             // 
-            // button1
+            // btnSale
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Computer_MGS.Properties.Resources.sale_32px_new;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 54);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(218, 41);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "  &Sale";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.btnSale.FlatAppearance.BorderSize = 0;
+            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.ForeColor = System.Drawing.Color.White;
+            this.btnSale.Image = global::Computer_MGS.Properties.Resources.sale_32px_new;
+            this.btnSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSale.Location = new System.Drawing.Point(0, 54);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSale.Size = new System.Drawing.Size(218, 41);
+            this.btnSale.TabIndex = 34;
+            this.btnSale.Text = "  &Sale";
+            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSale.UseVisualStyleBackColor = false;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
             // btnAboutSales
             // 
@@ -235,13 +288,13 @@ namespace Computer_MGS
             this.btnAboutSales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAboutSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAboutSales.UseVisualStyleBackColor = false;
-            this.btnAboutSales.Click += new System.EventHandler(this.btnSale_Click);
+            this.btnAboutSales.Click += new System.EventHandler(this.btnAboutSales_Click);
             // 
             // pnPurchasesDropDown
             // 
             this.pnPurchasesDropDown.BackColor = System.Drawing.Color.White;
-            this.pnPurchasesDropDown.Controls.Add(this.button3);
-            this.pnPurchasesDropDown.Controls.Add(this.button4);
+            this.pnPurchasesDropDown.Controls.Add(this.btnPurchaseDetail);
+            this.pnPurchasesDropDown.Controls.Add(this.btnPurchase);
             this.pnPurchasesDropDown.Controls.Add(this.btnAboutPurchases);
             this.pnPurchasesDropDown.Location = new System.Drawing.Point(3, 255);
             this.pnPurchasesDropDown.MaximumSize = new System.Drawing.Size(218, 134);
@@ -250,43 +303,45 @@ namespace Computer_MGS
             this.pnPurchasesDropDown.Size = new System.Drawing.Size(218, 54);
             this.pnPurchasesDropDown.TabIndex = 42;
             // 
-            // button3
+            // btnPurchaseDetail
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Computer_MGS.Properties.Resources.purchase_order_32px;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 95);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(218, 41);
-            this.button3.TabIndex = 35;
-            this.button3.Text = "  Purchase Detail";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnPurchaseDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.btnPurchaseDetail.FlatAppearance.BorderSize = 0;
+            this.btnPurchaseDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchaseDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchaseDetail.ForeColor = System.Drawing.Color.White;
+            this.btnPurchaseDetail.Image = global::Computer_MGS.Properties.Resources.purchase_order_32px;
+            this.btnPurchaseDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchaseDetail.Location = new System.Drawing.Point(0, 95);
+            this.btnPurchaseDetail.Name = "btnPurchaseDetail";
+            this.btnPurchaseDetail.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnPurchaseDetail.Size = new System.Drawing.Size(218, 41);
+            this.btnPurchaseDetail.TabIndex = 35;
+            this.btnPurchaseDetail.Text = "  Purchase Detail";
+            this.btnPurchaseDetail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchaseDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPurchaseDetail.UseVisualStyleBackColor = false;
+            this.btnPurchaseDetail.Click += new System.EventHandler(this.btnPurchaseDetail_Click);
             // 
-            // button4
+            // btnPurchase
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::Computer_MGS.Properties.Resources.purchase_order_32px;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 54);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(218, 41);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "  Purchase";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchase.ForeColor = System.Drawing.Color.White;
+            this.btnPurchase.Image = global::Computer_MGS.Properties.Resources.purchase_order_32px;
+            this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchase.Location = new System.Drawing.Point(0, 54);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnPurchase.Size = new System.Drawing.Size(218, 41);
+            this.btnPurchase.TabIndex = 34;
+            this.btnPurchase.Text = "  Purchase";
+            this.btnPurchase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPurchase.UseVisualStyleBackColor = false;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // btnAboutPurchases
             // 
@@ -307,7 +362,7 @@ namespace Computer_MGS
             this.btnAboutPurchases.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAboutPurchases.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAboutPurchases.UseVisualStyleBackColor = false;
-            this.btnAboutPurchases.Click += new System.EventHandler(this.btnPurchase_Click);
+            this.btnAboutPurchases.Click += new System.EventHandler(this.btnAboutPurchases_Click);
             // 
             // btnCategory
             // 
@@ -327,6 +382,7 @@ namespace Computer_MGS
             this.btnCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCategory.UseVisualStyleBackColor = false;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnMember
             // 
@@ -346,6 +402,7 @@ namespace Computer_MGS
             this.btnMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMember.UseVisualStyleBackColor = false;
+            this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
             // 
             // btnCustomer
             // 
@@ -365,6 +422,7 @@ namespace Computer_MGS
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnSupplier
             // 
@@ -384,6 +442,7 @@ namespace Computer_MGS
             this.btnSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSupplier.UseVisualStyleBackColor = false;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
             // btnStaff
             // 
@@ -403,6 +462,7 @@ namespace Computer_MGS
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStaff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStaff.UseVisualStyleBackColor = false;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnLogout
             // 
@@ -422,6 +482,7 @@ namespace Computer_MGS
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // salesDropDownTimer
             // 
@@ -442,7 +503,39 @@ namespace Computer_MGS
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 8;
             this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(6, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 25);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Lorn Sovannra";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(8, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Admin";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(219)))), ((int)(((byte)(213)))));
+            this.label4.Location = new System.Drawing.Point(252, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(589, 31);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Computer Management System - Dashboard";
             // 
             // MainForm
             // 
@@ -455,6 +548,11 @@ namespace Computer_MGS
             this.Text = "Computer Management System";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnDesktop.ResumeLayout(false);
+            this.pnHeader.ResumeLayout(false);
+            this.pnHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.flowLayoutPanelNavigation.ResumeLayout(false);
             this.flowLayoutPanelNavigation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -475,8 +573,8 @@ namespace Computer_MGS
         private System.Windows.Forms.Button btnComputer;
         private System.Windows.Forms.Panel pnHeader;
         private System.Windows.Forms.Panel pnSalesDropDown;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSaleDetail;
+        private System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.Button btnAboutSales;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Button btnMember;
@@ -486,10 +584,16 @@ namespace Computer_MGS
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Timer salesDropDownTimer;
         private System.Windows.Forms.Panel pnPurchasesDropDown;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPurchaseDetail;
+        private System.Windows.Forms.Button btnPurchase;
         private System.Windows.Forms.Button btnAboutPurchases;
         private System.Windows.Forms.Timer purchasesDropDownTimer;
+        private System.Windows.Forms.PictureBox pbClose;
+        private System.Windows.Forms.PictureBox pbMinimize;
+        private System.Windows.Forms.PictureBox pbMaximize;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }
 

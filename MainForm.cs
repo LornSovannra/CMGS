@@ -76,6 +76,68 @@ namespace Computer_MGS
             childForm.Show();
         }
 
+        private bool isSalesCollapsed;
+
+        private void salesDropDownTimer_Tick(object sender, EventArgs e)
+        {
+            if (isSalesCollapsed)
+            {
+                btnAboutSales.Image = Resources.collapse_arrow_32px_new;
+                pnSalesDropDown.Height += 10;
+                if(pnSalesDropDown.Size == pnSalesDropDown.MaximumSize)
+                {
+                    salesDropDownTimer.Stop();
+                    isSalesCollapsed = false;
+                }
+            }
+            else
+            {
+                btnAboutSales.Image = Resources.expand_arrow_32px;
+                pnSalesDropDown.Height -= 10;
+                if (pnSalesDropDown.Size == pnSalesDropDown.MinimumSize)
+                {
+                    salesDropDownTimer.Stop();
+                    isSalesCollapsed = true;
+                }
+            }
+        }
+
+        private void btnAboutSales_Click(object sender, EventArgs e)
+        {
+            salesDropDownTimer.Start();
+        }
+
+        private bool isPurchasesCollapsed;
+
+        private void purchasesDropDownTimer_Tick(object sender, EventArgs e)
+        {
+            if (isPurchasesCollapsed)
+            {
+                btnAboutPurchases.Image = Resources.collapse_arrow_32px_new;
+                pnPurchasesDropDown.Height += 10;
+                if (pnPurchasesDropDown.Size == pnPurchasesDropDown.MaximumSize)
+                {
+                    purchasesDropDownTimer.Stop();
+                    isPurchasesCollapsed = false;
+                }
+            }
+            else
+            {
+                btnAboutPurchases.Image = Resources.expand_arrow_32px;
+                pnPurchasesDropDown.Height -= 10;
+                if (pnPurchasesDropDown.Size == pnPurchasesDropDown.MinimumSize)
+                {
+                    purchasesDropDownTimer.Stop();
+                    isPurchasesCollapsed = true;
+                }
+            }
+        }
+
+        private void btnAboutPurchases_Click(object sender, EventArgs e)
+        {
+            purchasesDropDownTimer.Start();
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.DashboardForm(), sender);
@@ -89,6 +151,26 @@ namespace Computer_MGS
         private void btnComputer_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.ComputerForm(), sender);
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.SaleForm(), sender);
+        }
+
+        private void btnSaleDetail_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.SaleDetailForm(), sender);
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.PurchaseForm(), sender);
+        }
+
+        private void btnPurchaseDetail_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.PurchaseDetailForm(), sender);
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
@@ -121,7 +203,7 @@ namespace Computer_MGS
 
         }
 
-        private void pbExit_Click(object sender, EventArgs e)
+        private void pbClose_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to exit?", "You're going to exit this application.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -129,68 +211,14 @@ namespace Computer_MGS
             }
         }
 
-        private bool isSalesCollapsed;
-
-        private void salesDropDownTimer_Tick(object sender, EventArgs e)
+        private void pbMaximize_Click(object sender, EventArgs e)
         {
-            if (isSalesCollapsed)
-            {
-                btnAboutSales.Image = Resources.collapse_arrow_32px_new;
-                pnSalesDropDown.Height += 10;
-                if(pnSalesDropDown.Size == pnSalesDropDown.MaximumSize)
-                {
-                    salesDropDownTimer.Stop();
-                    isSalesCollapsed = false;
-                }
-            }
-            else
-            {
-                btnAboutSales.Image = Resources.expand_arrow_32px;
-                pnSalesDropDown.Height -= 10;
-                if (pnSalesDropDown.Size == pnSalesDropDown.MinimumSize)
-                {
-                    salesDropDownTimer.Stop();
-                    isSalesCollapsed = true;
-                }
-            }
+
         }
 
-        private void btnSale_Click(object sender, EventArgs e)
+        private void pbMinimize_Click(object sender, EventArgs e)
         {
-            salesDropDownTimer.Start();
+
         }
-
-        private bool isPurchasesCollapsed;
-
-        private void purchasesDropDownTimer_Tick(object sender, EventArgs e)
-        {
-            if (isPurchasesCollapsed)
-            {
-                btnAboutPurchases.Image = Resources.collapse_arrow_32px_new;
-                pnPurchasesDropDown.Height += 10;
-                if (pnPurchasesDropDown.Size == pnPurchasesDropDown.MaximumSize)
-                {
-                    purchasesDropDownTimer.Stop();
-                    isPurchasesCollapsed = false;
-                }
-            }
-            else
-            {
-                btnAboutPurchases.Image = Resources.expand_arrow_32px;
-                pnPurchasesDropDown.Height -= 10;
-                if (pnPurchasesDropDown.Size == pnPurchasesDropDown.MinimumSize)
-                {
-                    purchasesDropDownTimer.Stop();
-                    isPurchasesCollapsed = true;
-                }
-            }
-        }
-
-        private void btnPurchase_Click(object sender, EventArgs e)
-        {
-            purchasesDropDownTimer.Start();
-        }
-
-        
     }
 }

@@ -93,6 +93,16 @@ namespace Computer_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_64px {
+            get {
+                object obj = ResourceManager.GetObject("Close_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap collapse_arrow_32px {
             get {
                 object obj = ResourceManager.GetObject("collapse_arrow_32px", resourceCulture);
@@ -106,6 +116,16 @@ namespace Computer_MGS.Properties {
         internal static System.Drawing.Bitmap collapse_arrow_32px_new {
             get {
                 object obj = ResourceManager.GetObject("collapse_arrow_32px_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap computer_default_photo {
+            get {
+                object obj = ResourceManager.GetObject("computer_default_photo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace Computer_MGS.Properties {
         internal static System.Drawing.Bitmap expand_arrow_32px {
             get {
                 object obj = ResourceManager.GetObject("expand_arrow_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_screen_60px {
+            get {
+                object obj = ResourceManager.GetObject("full_screen_60px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +256,16 @@ namespace Computer_MGS.Properties {
         internal static System.Drawing.Bitmap staff_32px {
             get {
                 object obj = ResourceManager.GetObject("staff_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap subtract_60px {
+            get {
+                object obj = ResourceManager.GetObject("subtract_60px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
