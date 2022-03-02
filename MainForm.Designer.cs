@@ -32,6 +32,9 @@ namespace Computer_MGS
             this.components = new System.ComponentModel.Container();
             this.pnDesktop = new System.Windows.Forms.Panel();
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
@@ -57,9 +60,7 @@ namespace Computer_MGS
             this.salesDropDownTimer = new System.Windows.Forms.Timer(this.components);
             this.purchasesDropDownTimer = new System.Windows.Forms.Timer(this.components);
             this.pbExit = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pnDesktop.SuspendLayout();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
@@ -100,6 +101,39 @@ namespace Computer_MGS
             this.pnHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseMove);
             this.pnHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseUp);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(252, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(589, 31);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Computer Management System - Dashboard";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(8, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Admin";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(6, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 25);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Lorn Sovannra";
+            // 
             // pbMinimize
             // 
             this.pbMinimize.Image = global::Computer_MGS.Properties.Resources.subtract_60px;
@@ -109,6 +143,7 @@ namespace Computer_MGS
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMinimize.TabIndex = 45;
             this.pbMinimize.TabStop = false;
+            this.toolTip.SetToolTip(this.pbMinimize, "Minimize");
             this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
             // 
             // pbMaximize
@@ -120,6 +155,7 @@ namespace Computer_MGS
             this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMaximize.TabIndex = 44;
             this.pbMaximize.TabStop = false;
+            this.toolTip.SetToolTip(this.pbMaximize, "Maximize");
             this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click);
             // 
             // pbClose
@@ -131,6 +167,7 @@ namespace Computer_MGS
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbClose.TabIndex = 43;
             this.pbClose.TabStop = false;
+            this.toolTip.SetToolTip(this.pbClose, "Close");
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
             // flowLayoutPanelNavigation
@@ -504,39 +541,6 @@ namespace Computer_MGS
             this.pbExit.TabIndex = 8;
             this.pbExit.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(6, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 25);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Lorn Sovannra";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(8, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Admin";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(219)))), ((int)(((byte)(213)))));
-            this.label4.Location = new System.Drawing.Point(252, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(589, 31);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "Computer Management System - Dashboard";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,6 +598,7 @@ namespace Computer_MGS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

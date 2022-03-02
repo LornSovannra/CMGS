@@ -253,5 +253,8 @@
   <ItemGroup>
     <None Include="Resources\full_screen_60px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avatar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
