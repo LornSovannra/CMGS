@@ -31,25 +31,26 @@ namespace Computer_MGS.Forms
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbSaleID = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rtbRemark = new System.Windows.Forms.RichTextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbComputerID = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtQtySales = new System.Windows.Forms.TextBox();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMakeReport = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.rtbRemark = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvSaleDetail = new System.Windows.Forms.DataGridView();
-            this.cbSaleID = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,6 +71,7 @@ namespace Computer_MGS.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.cbSaleID);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.rtbRemark);
@@ -84,6 +86,55 @@ namespace Computer_MGS.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(892, 100);
             this.panel1.TabIndex = 3;
+            // 
+            // cbSaleID
+            // 
+            this.cbSaleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSaleID.FormattingEnabled = true;
+            this.cbSaleID.Location = new System.Drawing.Point(131, 12);
+            this.cbSaleID.Name = "cbSaleID";
+            this.cbSaleID.Size = new System.Drawing.Size(205, 28);
+            this.cbSaleID.TabIndex = 29;
+            this.cbSaleID.SelectedIndexChanged += new System.EventHandler(this.cbSaleID_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(668, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Remark";
+            // 
+            // rtbRemark
+            // 
+            this.rtbRemark.Location = new System.Drawing.Point(672, 35);
+            this.rtbRemark.Name = "rtbRemark";
+            this.rtbRemark.Size = new System.Drawing.Size(207, 51);
+            this.rtbRemark.TabIndex = 27;
+            this.rtbRemark.Text = "";
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscount.Location = new System.Drawing.Point(447, 58);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(205, 26);
+            this.txtDiscount.TabIndex = 26;
+            this.txtDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiscount_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(355, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 20);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Discount";
             // 
             // label3
             // 
@@ -136,26 +187,6 @@ namespace Computer_MGS.Forms
             this.txtQtySales.Size = new System.Drawing.Size(205, 26);
             this.txtQtySales.TabIndex = 0;
             this.txtQtySales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtySales_KeyPress);
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscount.Location = new System.Drawing.Point(447, 58);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(205, 26);
-            this.txtDiscount.TabIndex = 26;
-            this.txtDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiscount_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(355, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 20);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Discount";
             // 
             // panel2
             // 
@@ -229,25 +260,6 @@ namespace Computer_MGS.Forms
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // rtbRemark
-            // 
-            this.rtbRemark.Location = new System.Drawing.Point(672, 35);
-            this.rtbRemark.Name = "rtbRemark";
-            this.rtbRemark.Size = new System.Drawing.Size(207, 51);
-            this.rtbRemark.TabIndex = 27;
-            this.rtbRemark.Text = "";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(668, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 20);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Remark";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -296,15 +308,16 @@ namespace Computer_MGS.Forms
             this.dgvSaleDetail.TabIndex = 6;
             this.dgvSaleDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaleDetail_CellClick);
             // 
-            // cbSaleID
+            // label11
             // 
-            this.cbSaleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSaleID.FormattingEnabled = true;
-            this.cbSaleID.Location = new System.Drawing.Point(131, 12);
-            this.cbSaleID.Name = "cbSaleID";
-            this.cbSaleID.Size = new System.Drawing.Size(205, 28);
-            this.cbSaleID.TabIndex = 29;
-            this.cbSaleID.SelectedIndexChanged += new System.EventHandler(this.cbSaleID_SelectedIndexChanged);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.label11.Location = new System.Drawing.Point(624, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(24, 20);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "%";
             // 
             // SaleDetailForm
             // 
@@ -353,5 +366,6 @@ namespace Computer_MGS.Forms
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dgvSaleDetail;
         private System.Windows.Forms.ComboBox cbSaleID;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -38,7 +38,6 @@ namespace Computer_MGS
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanelNavigation = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
@@ -61,16 +60,17 @@ namespace Computer_MGS
             this.purchasesDropDownTimer = new System.Windows.Forms.Timer(this.components);
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.flowLayoutPanelNavigation = new System.Windows.Forms.FlowLayoutPanel();
             this.pnDesktop.SuspendLayout();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
-            this.flowLayoutPanelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnSalesDropDown.SuspendLayout();
             this.pnPurchasesDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            this.flowLayoutPanelNavigation.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnDesktop
@@ -169,27 +169,6 @@ namespace Computer_MGS
             this.pbClose.TabStop = false;
             this.toolTip.SetToolTip(this.pbClose, "Close");
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
-            // 
-            // flowLayoutPanelNavigation
-            // 
-            this.flowLayoutPanelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
-            this.flowLayoutPanelNavigation.Controls.Add(this.label1);
-            this.flowLayoutPanelNavigation.Controls.Add(this.pictureBox1);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnDashboard);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnComputer);
-            this.flowLayoutPanelNavigation.Controls.Add(this.pnSalesDropDown);
-            this.flowLayoutPanelNavigation.Controls.Add(this.pnPurchasesDropDown);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnCategory);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnMember);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnCustomer);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnSupplier);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnStaff);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnLogout);
-            this.flowLayoutPanelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanelNavigation.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanelNavigation.Name = "flowLayoutPanelNavigation";
-            this.flowLayoutPanelNavigation.Size = new System.Drawing.Size(219, 793);
-            this.flowLayoutPanelNavigation.TabIndex = 0;
             // 
             // label1
             // 
@@ -541,6 +520,27 @@ namespace Computer_MGS
             this.pbExit.TabIndex = 8;
             this.pbExit.TabStop = false;
             // 
+            // flowLayoutPanelNavigation
+            // 
+            this.flowLayoutPanelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
+            this.flowLayoutPanelNavigation.Controls.Add(this.label1);
+            this.flowLayoutPanelNavigation.Controls.Add(this.pictureBox1);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnDashboard);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnComputer);
+            this.flowLayoutPanelNavigation.Controls.Add(this.pnSalesDropDown);
+            this.flowLayoutPanelNavigation.Controls.Add(this.pnPurchasesDropDown);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnCategory);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnMember);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnCustomer);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnSupplier);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnStaff);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnLogout);
+            this.flowLayoutPanelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanelNavigation.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelNavigation.Name = "flowLayoutPanelNavigation";
+            this.flowLayoutPanelNavigation.Size = new System.Drawing.Size(219, 793);
+            this.flowLayoutPanelNavigation.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,12 +557,12 @@ namespace Computer_MGS
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
-            this.flowLayoutPanelNavigation.ResumeLayout(false);
-            this.flowLayoutPanelNavigation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnSalesDropDown.ResumeLayout(false);
             this.pnPurchasesDropDown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            this.flowLayoutPanelNavigation.ResumeLayout(false);
+            this.flowLayoutPanelNavigation.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -570,7 +570,6 @@ namespace Computer_MGS
         #endregion
         private System.Windows.Forms.Panel pnDesktop;
         private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelNavigation;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -599,6 +598,7 @@ namespace Computer_MGS
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelNavigation;
     }
 }
 

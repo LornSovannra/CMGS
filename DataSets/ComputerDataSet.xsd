@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ComputerDataSet" targetNamespace="http://tempuri.org/ComputerDataSet.xsd" xmlns:mstns="http://tempuri.org/ComputerDataSet.xsd" xmlns="http://tempuri.org/ComputerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectToComputerMGS" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectToComputerMGS (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.Computer_MGS.Properties.Settings.GlobalReference.Default.ConnectToComputerMGS" Provider="Oracle.ManagedDataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBLCOMPUTERSTableAdapter" GeneratorDataComponentClassName="TBLCOMPUTERSTableAdapter" Name="TBLCOMPUTERS" UserDataComponentName="TBLCOMPUTERSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectToComputerMGS (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COMPUTERMGS.TBLCOMPUTERS.COMPUTERID, COMPUTERMGS.TBLCOMPUTERS.COMPUTERNAME, COMPUTERMGS.TBLCATEGORIES.CATEGORYNAME, COMPUTERMGS.TBLCOMPUTERS.QTY, 
+                         COMPUTERMGS.TBLCOMPUTERS.UNITPRICEIN, COMPUTERMGS.TBLCOMPUTERS.UNITPRICEOUT
+FROM            COMPUTERMGS.TBLCOMPUTERS INNER JOIN
+                         COMPUTERMGS.TBLCATEGORIES ON COMPUTERMGS.TBLCOMPUTERS.CATEGORYID = COMPUTERMGS.TBLCATEGORIES.CATEGORYID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="COMPUTERID" DataSetColumn="COMPUTERID" />
+              <Mapping SourceColumn="COMPUTERNAME" DataSetColumn="COMPUTERNAME" />
+              <Mapping SourceColumn="CATEGORYNAME" DataSetColumn="CATEGORYNAME" />
+              <Mapping SourceColumn="QTY" DataSetColumn="QTY" />
+              <Mapping SourceColumn="UNITPRICEIN" DataSetColumn="UNITPRICEIN" />
+              <Mapping SourceColumn="UNITPRICEOUT" DataSetColumn="UNITPRICEOUT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ComputerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ComputerDataSet" msprop:Generator_UserDSName="ComputerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TBLCOMPUTERS" msprop:Generator_TableClassName="TBLCOMPUTERSDataTable" msprop:Generator_TableVarName="tableTBLCOMPUTERS" msprop:Generator_TablePropName="TBLCOMPUTERS" msprop:Generator_RowDeletingName="TBLCOMPUTERSRowDeleting" msprop:Generator_RowChangingName="TBLCOMPUTERSRowChanging" msprop:Generator_RowEvHandlerName="TBLCOMPUTERSRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLCOMPUTERSRowDeleted" msprop:Generator_UserTableName="TBLCOMPUTERS" msprop:Generator_RowChangedName="TBLCOMPUTERSRowChanged" msprop:Generator_RowEvArgName="TBLCOMPUTERSRowChangeEvent" msprop:Generator_RowClassName="TBLCOMPUTERSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COMPUTERID" msprop:Generator_ColumnVarNameInTable="columnCOMPUTERID" msprop:Generator_ColumnPropNameInRow="COMPUTERID" msprop:Generator_ColumnPropNameInTable="COMPUTERIDColumn" msprop:Generator_UserColumnName="COMPUTERID" type="xs:decimal" />
+              <xs:element name="COMPUTERNAME" msprop:Generator_ColumnVarNameInTable="columnCOMPUTERNAME" msprop:Generator_ColumnPropNameInRow="COMPUTERNAME" msprop:Generator_ColumnPropNameInTable="COMPUTERNAMEColumn" msprop:Generator_UserColumnName="COMPUTERNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CATEGORYNAME" msprop:Generator_ColumnVarNameInTable="columnCATEGORYNAME" msprop:Generator_ColumnPropNameInRow="CATEGORYNAME" msprop:Generator_ColumnPropNameInTable="CATEGORYNAMEColumn" msprop:Generator_UserColumnName="CATEGORYNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTY" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" msprop:Generator_UserColumnName="QTY" type="xs:decimal" />
+              <xs:element name="UNITPRICEIN" msprop:Generator_ColumnVarNameInTable="columnUNITPRICEIN" msprop:Generator_ColumnPropNameInRow="UNITPRICEIN" msprop:Generator_ColumnPropNameInTable="UNITPRICEINColumn" msprop:Generator_UserColumnName="UNITPRICEIN" type="xs:double" minOccurs="0" />
+              <xs:element name="UNITPRICEOUT" msprop:Generator_ColumnVarNameInTable="columnUNITPRICEOUT" msprop:Generator_ColumnPropNameInRow="UNITPRICEOUT" msprop:Generator_ColumnPropNameInTable="UNITPRICEOUTColumn" msprop:Generator_UserColumnName="UNITPRICEOUT" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

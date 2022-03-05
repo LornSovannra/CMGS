@@ -162,7 +162,7 @@ namespace Computer_MGS.Forms
                         insert_command.Parameters.Add(new OracleParameter("2", SaleID));
                         insert_command.Parameters.Add(new OracleParameter("3", ComputerID));
                         insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(txtQtySales.Text)));
-                        insert_command.Parameters.Add(new OracleParameter("5", Decimal.Parse(txtDiscount.Text)));
+                        insert_command.Parameters.Add(new OracleParameter("5", txtDiscount.Text));
                         insert_command.Parameters.Add(new OracleParameter("6", rtbRemark.Text));
 
                         if (insert_command.ExecuteNonQuery() > 0)
@@ -188,11 +188,14 @@ namespace Computer_MGS.Forms
             }
         }
 
+        string CurrentSaleID;
+        string CurrentComputerID;
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                if (MessageBox.Show("Are you sure to update Sale Detail with SaleID: , " + cbSaleID.Text + "and ComputerName: " + cbComputerID.Text + "?", "UPDATE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure to update Sale Detail with SaleID: " + cbSaleID.Text + " and ComputerName: " + cbComputerID.Text + "?", "UPDATE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (string.IsNullOrEmpty(cbSaleID.Text))
                     {
@@ -219,8 +222,8 @@ namespace Computer_MGS.Forms
                         update_command.Parameters.Add(new OracleParameter("5", Int32.Parse(txtQtySales.Text)));
                         update_command.Parameters.Add(new OracleParameter("6", Decimal.Parse(txtDiscount.Text)));
                         update_command.Parameters.Add(new OracleParameter("7", rtbRemark.Text));
-                        update_command.Parameters.Add(new OracleParameter("1", Int32.Parse(SaleID)));
-                        update_command.Parameters.Add(new OracleParameter("2", Int32.Parse(ComputerID)));
+                        update_command.Parameters.Add(new OracleParameter("1", Int32.Parse(CurrentSaleID)));
+                        update_command.Parameters.Add(new OracleParameter("2", Int32.Parse(CurrentComputerID)));
 
                         if (update_command.ExecuteNonQuery() > 0)
                         {

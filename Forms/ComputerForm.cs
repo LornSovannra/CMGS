@@ -314,7 +314,8 @@ namespace Computer_MGS.Forms
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
-
+            ReportForms.ComputerReportForm f = new ReportForms.ComputerReportForm();
+            f.ShowDialog();
         }
 
         private void dgvComputer_CellClick(object sender, DataGridViewCellEventArgs e)
