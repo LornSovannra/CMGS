@@ -143,6 +143,10 @@ namespace Computer_MGS
             OpenChildForm(new Forms.DashboardForm(), sender);
             lblStaffName.Text = Classes.UserLogin.getStaffName();
             lblStaffUserType.Text = Classes.UserLogin.getUserType();
+            if(Classes.UserLogin.getUserType() != "Admin")
+            {
+                btnStaff.Hide();
+            }
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
