@@ -232,7 +232,15 @@ namespace Computer_MGS.Forms
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                ReportForms.PurchaseReportForm f = new ReportForms.PurchaseReportForm();
+                f.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void dgvPurchase_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -294,6 +294,7 @@ namespace Computer_MGS.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "SaleForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SaleForm";
             this.Load += new System.EventHandler(this.SaleForm_Load);
             this.panel1.ResumeLayout(false);

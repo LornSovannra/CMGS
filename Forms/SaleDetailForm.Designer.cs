@@ -31,6 +31,7 @@ namespace Computer_MGS.Forms
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.cbSaleID = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rtbRemark = new System.Windows.Forms.RichTextBox();
@@ -50,7 +51,6 @@ namespace Computer_MGS.Forms
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvSaleDetail = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,6 +86,17 @@ namespace Computer_MGS.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(892, 100);
             this.panel1.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.label11.Location = new System.Drawing.Point(624, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(24, 20);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "%";
             // 
             // cbSaleID
             // 
@@ -308,17 +319,6 @@ namespace Computer_MGS.Forms
             this.dgvSaleDetail.TabIndex = 6;
             this.dgvSaleDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaleDetail_CellClick);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.label11.Location = new System.Drawing.Point(624, 61);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 20);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "%";
-            // 
             // SaleDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,6 +330,7 @@ namespace Computer_MGS.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "SaleDetailForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SaleDetailForm";
             this.Load += new System.EventHandler(this.SaleDetailForm_Load);
             this.panel1.ResumeLayout(false);

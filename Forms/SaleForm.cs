@@ -232,7 +232,8 @@ namespace Computer_MGS.Forms
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
-
+            ReportForms.SaleReportForm f = new ReportForms.SaleReportForm();
+            f.ShowDialog();
         }
 
         private void dgvSale_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -270,6 +270,7 @@ namespace Computer_MGS.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "PurchaseDetailForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PurchaseDetailForm";
             this.Load += new System.EventHandler(this.PurchaseDetailForm_Load);
             this.panel1.ResumeLayout(false);

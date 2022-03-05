@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PurchaseDetailDataSet" targetNamespace="http://tempuri.org/PurchaseDetailDataSet.xsd" xmlns:mstns="http://tempuri.org/PurchaseDetailDataSet.xsd" xmlns="http://tempuri.org/PurchaseDetailDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectToComputerMGS" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectToComputerMGS (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.Computer_MGS.Properties.Settings.GlobalReference.Default.ConnectToComputerMGS" Provider="Oracle.ManagedDataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PurchaseDetailTableAdapter" GeneratorDataComponentClassName="PurchaseDetailTableAdapter" Name="PurchaseDetail" UserDataComponentName="PurchaseDetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectToComputerMGS (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COMPUTERMGS.TBLPURCHASEDETAILS.PURCHASEID, COMPUTERMGS.TBLCOMPUTERS.COMPUTERNAME
+FROM            COMPUTERMGS.TBLCOMPUTERS INNER JOIN
+                         COMPUTERMGS.TBLPURCHASEDETAILS ON COMPUTERMGS.TBLCOMPUTERS.COMPUTERID = COMPUTERMGS.TBLPURCHASEDETAILS.COMPUTERID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PURCHASEID" DataSetColumn="PURCHASEID" />
+              <Mapping SourceColumn="COMPUTERNAME" DataSetColumn="COMPUTERNAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PurchaseDetailDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PurchaseDetailDataSet" msprop:Generator_UserDSName="PurchaseDetailDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PurchaseDetail" msprop:Generator_TableClassName="PurchaseDetailDataTable" msprop:Generator_TableVarName="tablePurchaseDetail" msprop:Generator_TablePropName="PurchaseDetail" msprop:Generator_RowDeletingName="PurchaseDetailRowDeleting" msprop:Generator_RowChangingName="PurchaseDetailRowChanging" msprop:Generator_RowEvHandlerName="PurchaseDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="PurchaseDetailRowDeleted" msprop:Generator_UserTableName="PurchaseDetail" msprop:Generator_RowChangedName="PurchaseDetailRowChanged" msprop:Generator_RowEvArgName="PurchaseDetailRowChangeEvent" msprop:Generator_RowClassName="PurchaseDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PURCHASEID" msprop:Generator_ColumnVarNameInTable="columnPURCHASEID" msprop:Generator_ColumnPropNameInRow="PURCHASEID" msprop:Generator_ColumnPropNameInTable="PURCHASEIDColumn" msprop:Generator_UserColumnName="PURCHASEID" type="xs:decimal" />
+              <xs:element name="COMPUTERNAME" msprop:Generator_ColumnVarNameInTable="columnCOMPUTERNAME" msprop:Generator_ColumnPropNameInRow="COMPUTERNAME" msprop:Generator_ColumnPropNameInTable="COMPUTERNAMEColumn" msprop:Generator_UserColumnName="COMPUTERNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

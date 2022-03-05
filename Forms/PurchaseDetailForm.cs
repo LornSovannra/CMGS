@@ -264,7 +264,8 @@ namespace Computer_MGS.Forms
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
-
+            ReportForms.PurchaseDetailReportForm f = new ReportForms.PurchaseDetailReportForm();
+            f.ShowDialog();
         }
 
         private void dgvPurchaseDetail_CellClick(object sender, DataGridViewCellEventArgs e)
