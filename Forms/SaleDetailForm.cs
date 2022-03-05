@@ -157,28 +157,41 @@ namespace Computer_MGS.Forms
                     }
                     else
                     {
-                        string sql = "INSERT INTO tblSaleDetails(SaleID, ComputerID, QtySales, Discount, Remark) VALUES(:2, :3, :4, :5, :6)";
-                        OracleCommand insert_command = new OracleCommand(sql, conn);
-                        insert_command.Parameters.Add(new OracleParameter("2", SaleID));
-                        insert_command.Parameters.Add(new OracleParameter("3", ComputerID));
-                        insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(txtQtySales.Text)));
-                        insert_command.Parameters.Add(new OracleParameter("5", txtDiscount.Text));
-                        insert_command.Parameters.Add(new OracleParameter("6", rtbRemark.Text));
+                        string check_data = "SELECT * FROM tblSaleDetails WHERE SaleID = " + SaleID + " AND " + "ComputerID = " + ComputerID;
+                        OracleDataAdapter adapter = new OracleDataAdapter(check_data, conn);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
 
-                        if (insert_command.ExecuteNonQuery() > 0)
+                        if (dt.Rows.Count == 0)
                         {
-                            MessageBox.Show("One record has added to Database!", "CREATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            btnCreate.Text = "Create";
-                            btnUpdate.Enabled = true;
-                            btnDelete.Text = "Delete";
-                            dgvSaleDetail.Enabled = true;
-                            ClearField();
-                            LoadData();
+                            string sql = "INSERT INTO tblSaleDetails(SaleID, ComputerID, QtySales, Discount, Remark) VALUES(:2, :3, :4, :5, :6)";
+                            OracleCommand insert_command = new OracleCommand(sql, conn);
+                            insert_command.Parameters.Add(new OracleParameter("2", SaleID));
+                            insert_command.Parameters.Add(new OracleParameter("3", ComputerID));
+                            insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(txtQtySales.Text)));
+                            insert_command.Parameters.Add(new OracleParameter("5", txtDiscount.Text));
+                            insert_command.Parameters.Add(new OracleParameter("6", rtbRemark.Text));
+
+                            if (insert_command.ExecuteNonQuery() > 0)
+                            {
+                                MessageBox.Show("One record has added to Database!", "CREATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                btnCreate.Text = "Create";
+                                btnUpdate.Enabled = true;
+                                btnDelete.Text = "Delete";
+                                dgvSaleDetail.Enabled = true;
+                                ClearField();
+                                LoadData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Fail to add!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Fail to add!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid Information!", "Check your information again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+
                     }
                 }
             }
@@ -187,9 +200,6 @@ namespace Computer_MGS.Forms
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-        string CurrentSaleID;
-        string CurrentComputerID;
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -215,25 +225,37 @@ namespace Computer_MGS.Forms
                     }
                     else
                     {
-                        string sql = "UPDATE tblSaleDetails SET SaleID = :3, ComputerID = :4, QtySales = :5, Discount = :6, Remark = :7 WHERE SaleID = :1 AND ComputerID = :2";
-                        OracleCommand update_command = new OracleCommand(sql, conn);
-                        update_command.Parameters.Add(new OracleParameter("3", Int32.Parse(SaleID)));
-                        update_command.Parameters.Add(new OracleParameter("4", Int32.Parse(ComputerID)));
-                        update_command.Parameters.Add(new OracleParameter("5", Int32.Parse(txtQtySales.Text)));
-                        update_command.Parameters.Add(new OracleParameter("6", Decimal.Parse(txtDiscount.Text)));
-                        update_command.Parameters.Add(new OracleParameter("7", rtbRemark.Text));
-                        update_command.Parameters.Add(new OracleParameter("1", Int32.Parse(CurrentSaleID)));
-                        update_command.Parameters.Add(new OracleParameter("2", Int32.Parse(CurrentComputerID)));
+                        string check_data = "SELECT * FROM tblSaleDetails WHERE SaleID = " + SaleID + " AND " + "ComputerID = " + ComputerID;
+                        OracleDataAdapter adapter = new OracleDataAdapter(check_data, conn);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
 
-                        if (update_command.ExecuteNonQuery() > 0)
+                        if(dt.Rows.Count == 0)
                         {
-                            MessageBox.Show("One record has updated to Database!", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LoadData();
-                            ClearField();
+                            string sql = "UPDATE tblSaleDetails SET SaleID = :3, ComputerID = :4, QtySales = :5, Discount = :6, Remark = :7 WHERE SaleID = :1 AND ComputerID = :2";
+                            OracleCommand update_command = new OracleCommand(sql, conn);
+                            update_command.Parameters.Add(new OracleParameter("3", Int32.Parse(SaleID)));
+                            update_command.Parameters.Add(new OracleParameter("4", Int32.Parse(ComputerID)));
+                            update_command.Parameters.Add(new OracleParameter("5", Int32.Parse(txtQtySales.Text)));
+                            update_command.Parameters.Add(new OracleParameter("6", txtDiscount.Text));
+                            update_command.Parameters.Add(new OracleParameter("7", rtbRemark.Text));
+                            update_command.Parameters.Add(new OracleParameter("1", Int32.Parse(CurrentSaleID)));
+                            update_command.Parameters.Add(new OracleParameter("2", Int32.Parse(CurrentComputerID)));
+
+                            if (update_command.ExecuteNonQuery() > 0)
+                            {
+                                MessageBox.Show("One record has updated to Database!", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LoadData();
+                                ClearField();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Fail to update!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Fail to update!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid Information!", "Check your information again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -261,8 +283,8 @@ namespace Computer_MGS.Forms
                     {
                         string sql = "DELETE tblSaleDetails WHERE SaleID = :1 AND ComputerID = :2";
                         OracleCommand delete_cmd = new OracleCommand(sql, conn);
-                        delete_cmd.Parameters.Add(new OracleParameter("1", Int32.Parse(SaleID)));
-                        delete_cmd.Parameters.Add(new OracleParameter("2", Int32.Parse(ComputerID)));
+                        delete_cmd.Parameters.Add(new OracleParameter("1", Int32.Parse(CurrentSaleID)));
+                        delete_cmd.Parameters.Add(new OracleParameter("2", Int32.Parse(CurrentComputerID)));
 
                         if (delete_cmd.ExecuteNonQuery() > 0)
                         {
@@ -288,18 +310,27 @@ namespace Computer_MGS.Forms
             f.ShowDialog();
         }
 
+        string CurrentSaleID;
+        string CurrentComputerID;
+
         private void dgvSaleDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
 
-            SaleID = dgvSaleDetail.CurrentRow.Cells[0].Value.ToString();
-            cbSaleID.Text = SaleID;
-            //cbSaleID.Text = dgvSaleDetail.CurrentRow.Cells[0].Value.ToString();
+            cbSaleID.Text = dgvSaleDetail.CurrentRow.Cells[0].Value.ToString();
+            CurrentSaleID = dgvSaleDetail.CurrentRow.Cells[0].Value.ToString();
 
-            ComputerID = dgvSaleDetail.CurrentRow.Cells[1].Value.ToString();
-            cbComputerID.Text = ComputerID;
-            //cbComputerID.Text = dgvSaleDetail.CurrentRow.Cells[1].Value.ToString();
+            cbComputerID.Text = dgvSaleDetail.CurrentRow.Cells[1].Value.ToString();
+            string select_sql = "SELECT ComputerID FROM tblComputers WHERE ComputerName = :1";
+            OracleCommand select_cmd = new OracleCommand(select_sql, conn);
+            select_cmd.Parameters.Add("1", cbComputerID.Text);
+            OracleDataReader dr = select_cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                CurrentComputerID = dr[0].ToString();
+            }
 
             txtQtySales.Text = dgvSaleDetail.CurrentRow.Cells[2].Value.ToString();
             txtDiscount.Text = dgvSaleDetail.CurrentRow.Cells[3].Value.ToString();

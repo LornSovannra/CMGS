@@ -150,25 +150,37 @@ namespace Computer_MGS.Forms
                     }
                     else
                     {
-                        string sql = "INSERT INTO tblPurchaseDetails(PurchaseID, ComputerID, PurchaseQty) VALUES(:2, :3, :4)";
-                        OracleCommand insert_command = new OracleCommand(sql, conn);
-                        insert_command.Parameters.Add(new OracleParameter("2", Int32.Parse(PurchaseID)));
-                        insert_command.Parameters.Add(new OracleParameter("3", Int32.Parse(ComputerID)));
-                        insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(txtPurchaseQty.Text)));
+                        string check_data = "SELECT * FROM tblPurchaseDetails WHERE PurchaseID = " + PurchaseID + " AND " + "ComputerID = " + ComputerID;
+                        OracleDataAdapter adapter = new OracleDataAdapter(check_data, conn);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
 
-                        if (insert_command.ExecuteNonQuery() > 0)
+                        if (dt.Rows.Count == 0)
                         {
-                            MessageBox.Show("One record has added to Database!", "CREATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            btnCreate.Text = "Create";
-                            btnUpdate.Enabled = true;
-                            btnDelete.Text = "Delete";
-                            dgvPurchaseDetail.Enabled = true;
-                            ClearField();
-                            LoadData();
+                            string sql = "INSERT INTO tblPurchaseDetails(PurchaseID, ComputerID, PurchaseQty) VALUES(:2, :3, :4)";
+                            OracleCommand insert_command = new OracleCommand(sql, conn);
+                            insert_command.Parameters.Add(new OracleParameter("2", Int32.Parse(PurchaseID)));
+                            insert_command.Parameters.Add(new OracleParameter("3", Int32.Parse(ComputerID)));
+                            insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(txtPurchaseQty.Text)));
+
+                            if (insert_command.ExecuteNonQuery() > 0)
+                            {
+                                MessageBox.Show("One record has added to Database!", "CREATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                btnCreate.Text = "Create";
+                                btnUpdate.Enabled = true;
+                                btnDelete.Text = "Delete";
+                                dgvPurchaseDetail.Enabled = true;
+                                ClearField();
+                                LoadData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Fail to add!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Fail to add!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid Information!", "Check your information again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -199,22 +211,34 @@ namespace Computer_MGS.Forms
                     }
                     else
                     {
-                        string sql = "UPDATE tblPurchaseDetails SET PurchaseID = :2, ComputerID = :3, PurchaseQty = :4 WHERE PurchaseDetailID = :1";
-                        OracleCommand update_command = new OracleCommand(sql, conn);
-                        update_command.Parameters.Add(new OracleParameter("2", cbPurchaseID.Text));
-                        update_command.Parameters.Add(new OracleParameter("3", ComputerID));
-                        update_command.Parameters.Add(new OracleParameter("4", txtPurchaseQty.Text));
-                        update_command.Parameters.Add(new OracleParameter("1", Int32.Parse(cbPurchaseID.Text)));
+                        string check_data = "SELECT * FROM tblPurchaseDetails WHERE PurchaseID = " + PurchaseID + " AND " + "ComputerID = " + ComputerID;
+                        OracleDataAdapter adapter = new OracleDataAdapter(check_data, conn);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
 
-                        if (update_command.ExecuteNonQuery() > 0)
+                        if (dt.Rows.Count == 0)
                         {
-                            MessageBox.Show("One record has updated to Database!", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LoadData();
-                            ClearField();
+                            string sql = "UPDATE tblPurchaseDetails SET PurchaseID = :2, ComputerID = :3, PurchaseQty = :4 WHERE PurchaseDetailID = :1";
+                            OracleCommand update_command = new OracleCommand(sql, conn);
+                            update_command.Parameters.Add(new OracleParameter("2", cbPurchaseID.Text));
+                            update_command.Parameters.Add(new OracleParameter("3", ComputerID));
+                            update_command.Parameters.Add(new OracleParameter("4", txtPurchaseQty.Text));
+                            update_command.Parameters.Add(new OracleParameter("1", Int32.Parse(cbPurchaseID.Text)));
+
+                            if (update_command.ExecuteNonQuery() > 0)
+                            {
+                                MessageBox.Show("One record has updated to Database!", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LoadData();
+                                ClearField();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Fail to update!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Fail to update!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid Information!", "Check your information again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -238,11 +262,12 @@ namespace Computer_MGS.Forms
                 }
                 else if (btnDelete.Text == "Delete")
                 {
-                    if (MessageBox.Show("Are you sure to delete, " + cbPurchaseID.Text + "?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Are you sure to delete Purchase Detail with PurchaseID: " + cbPurchaseID.Text + " and ComputerName: " + cbComputerID.Text + "?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        string sql = "DELETE tblPurchaseDetails WHERE PurchaseDetailID = :1";
+                        string sql = "DELETE tblPurchaseDetails WHERE PurchaseID = :1 AND ComputerID = :2";
                         OracleCommand delete_cmd = new OracleCommand(sql, conn);
-                        delete_cmd.Parameters.Add(new OracleParameter("1", Int32.Parse(cbPurchaseID.Text)));
+                        delete_cmd.Parameters.Add(new OracleParameter("1", Int32.Parse(CurrentPurchaseID)));
+                        delete_cmd.Parameters.Add(new OracleParameter("2", Int32.Parse(CurrentComputerID)));
 
                         if (delete_cmd.ExecuteNonQuery() > 0)
                         {
@@ -268,18 +293,29 @@ namespace Computer_MGS.Forms
             f.ShowDialog();
         }
 
+        string CurrentPurchaseID;
+        string CurrentComputerID;
+
         private void dgvPurchaseDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //btnUpdate.Enabled = true;
-            //btnDelete.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
 
-            //PurchaseID = dgvPurchaseDetail.CurrentRow.Cells[1].Value.ToString();
-            //txtPurchaseID.Text = dgvPurchaseDetail.CurrentRow.Cells[1].Value.ToString();
+            cbPurchaseID.Text = dgvPurchaseDetail.CurrentRow.Cells[0].Value.ToString();
+            CurrentPurchaseID = dgvPurchaseDetail.CurrentRow.Cells[0].Value.ToString();
 
-            //ComputerID = dgvPurchaseDetail.CurrentRow.Cells[2].Value.ToString();
-            //cbComputerID.Text = dgvPurchaseDetail.CurrentRow.Cells[2].Value.ToString();
+            cbComputerID.Text = dgvPurchaseDetail.CurrentRow.Cells[1].Value.ToString();
+            string select_sql = "SELECT ComputerID FROM tblComputers WHERE ComputerName = :1";
+            OracleCommand select_cmd = new OracleCommand(select_sql, conn);
+            select_cmd.Parameters.Add("1", cbComputerID.Text);
+            OracleDataReader dr = select_cmd.ExecuteReader();
 
-            //txtPurchaseQty.Text = dgvPurchaseDetail.CurrentRow.Cells[3].Value.ToString();
+            while (dr.Read())
+            {
+                CurrentComputerID = dr[0].ToString();
+            }
+
+            txtPurchaseQty.Text = dgvPurchaseDetail.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

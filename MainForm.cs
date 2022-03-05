@@ -141,6 +141,8 @@ namespace Computer_MGS
         private void MainForm_Load(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.DashboardForm(), sender);
+            lblStaffName.Text = Classes.UserLogin.getStaffName();
+            lblStaffUserType.Text = Classes.UserLogin.getUserType();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -200,7 +202,12 @@ namespace Computer_MGS
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Are you sure you want to logout?", "You're going to logout this account.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Forms.LoginForm lf = new Forms.LoginForm();
+                this.Hide();
+                lf.Show();
+            }
         }
 
         private void pbClose_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace Computer_MGS.Classes
         //Static Fields
         private static string StaffID;
         private static string StaffName;
-        private static string JobTitle;
+        private static string UserType;
 
         //Setter Methods
         public static void setStaffID(string id)
@@ -24,9 +24,9 @@ namespace Computer_MGS.Classes
             StaffName = name;
         }
 
-        public static void setJobTitle(string jobTitle)
+        public static void setUserType(string userType)
         {
-            JobTitle = jobTitle;
+            UserType = userType;
         }
 
         //Getter Methods
@@ -40,9 +40,9 @@ namespace Computer_MGS.Classes
             return StaffName;
         }
 
-        public static string getJobTitle()
+        public static string getUserType()
         {
-            return JobTitle;
+            return UserType;
         }
     }
 }

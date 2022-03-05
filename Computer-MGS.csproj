@@ -137,6 +137,12 @@
     <Compile Include="Forms\DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     </Compile>
     <Compile Include="Forms\SaleForm.Designer.cs">
       <DependentUpon>SaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StaffForm.cs">
       <SubType>Form</SubType>
@@ -249,6 +261,9 @@
     <EmbeddedResource Include="Forms\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MemberForm.resx">
       <DependentUpon>MemberForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SaleForm.resx">
       <DependentUpon>SaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffForm.resx">
       <DependentUpon>StaffForm.cs</DependentUpon>
@@ -443,6 +461,23 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Computer MGS%27s Login Banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract_60px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_shield_128px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisible_24px_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible_24px_new.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

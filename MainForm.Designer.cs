@@ -33,11 +33,12 @@ namespace Computer_MGS
             this.pnDesktop = new System.Windows.Forms.Panel();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblStaffUserType = new System.Windows.Forms.Label();
+            this.lblStaffName = new System.Windows.Forms.Label();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanelNavigation = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
@@ -60,17 +61,16 @@ namespace Computer_MGS
             this.purchasesDropDownTimer = new System.Windows.Forms.Timer(this.components);
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.flowLayoutPanelNavigation = new System.Windows.Forms.FlowLayoutPanel();
             this.pnDesktop.SuspendLayout();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
+            this.flowLayoutPanelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnSalesDropDown.SuspendLayout();
             this.pnPurchasesDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
-            this.flowLayoutPanelNavigation.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnDesktop
@@ -87,8 +87,8 @@ namespace Computer_MGS
             // 
             this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
             this.pnHeader.Controls.Add(this.label4);
-            this.pnHeader.Controls.Add(this.label3);
-            this.pnHeader.Controls.Add(this.label2);
+            this.pnHeader.Controls.Add(this.lblStaffUserType);
+            this.pnHeader.Controls.Add(this.lblStaffName);
             this.pnHeader.Controls.Add(this.pbMinimize);
             this.pnHeader.Controls.Add(this.pbMaximize);
             this.pnHeader.Controls.Add(this.pbClose);
@@ -112,27 +112,27 @@ namespace Computer_MGS
             this.label4.TabIndex = 48;
             this.label4.Text = "Computer Management System - Dashboard";
             // 
-            // label3
+            // lblStaffUserType
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(8, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Admin";
+            this.lblStaffUserType.AutoSize = true;
+            this.lblStaffUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffUserType.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblStaffUserType.Location = new System.Drawing.Point(8, 36);
+            this.lblStaffUserType.Name = "lblStaffUserType";
+            this.lblStaffUserType.Size = new System.Drawing.Size(47, 17);
+            this.lblStaffUserType.TabIndex = 47;
+            this.lblStaffUserType.Text = "Admin";
             // 
-            // label2
+            // lblStaffName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(6, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 25);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Lorn Sovannra";
+            this.lblStaffName.AutoSize = true;
+            this.lblStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffName.ForeColor = System.Drawing.Color.White;
+            this.lblStaffName.Location = new System.Drawing.Point(6, 9);
+            this.lblStaffName.Name = "lblStaffName";
+            this.lblStaffName.Size = new System.Drawing.Size(141, 25);
+            this.lblStaffName.TabIndex = 46;
+            this.lblStaffName.Text = "Lorn Sovannra";
             // 
             // pbMinimize
             // 
@@ -169,6 +169,27 @@ namespace Computer_MGS
             this.pbClose.TabStop = false;
             this.toolTip.SetToolTip(this.pbClose, "Close");
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // flowLayoutPanelNavigation
+            // 
+            this.flowLayoutPanelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
+            this.flowLayoutPanelNavigation.Controls.Add(this.label1);
+            this.flowLayoutPanelNavigation.Controls.Add(this.pictureBox1);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnDashboard);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnComputer);
+            this.flowLayoutPanelNavigation.Controls.Add(this.pnSalesDropDown);
+            this.flowLayoutPanelNavigation.Controls.Add(this.pnPurchasesDropDown);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnCategory);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnMember);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnCustomer);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnSupplier);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnStaff);
+            this.flowLayoutPanelNavigation.Controls.Add(this.btnLogout);
+            this.flowLayoutPanelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanelNavigation.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelNavigation.Name = "flowLayoutPanelNavigation";
+            this.flowLayoutPanelNavigation.Size = new System.Drawing.Size(219, 793);
+            this.flowLayoutPanelNavigation.TabIndex = 0;
             // 
             // label1
             // 
@@ -520,27 +541,6 @@ namespace Computer_MGS
             this.pbExit.TabIndex = 8;
             this.pbExit.TabStop = false;
             // 
-            // flowLayoutPanelNavigation
-            // 
-            this.flowLayoutPanelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
-            this.flowLayoutPanelNavigation.Controls.Add(this.label1);
-            this.flowLayoutPanelNavigation.Controls.Add(this.pictureBox1);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnDashboard);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnComputer);
-            this.flowLayoutPanelNavigation.Controls.Add(this.pnSalesDropDown);
-            this.flowLayoutPanelNavigation.Controls.Add(this.pnPurchasesDropDown);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnCategory);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnMember);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnCustomer);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnSupplier);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnStaff);
-            this.flowLayoutPanelNavigation.Controls.Add(this.btnLogout);
-            this.flowLayoutPanelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanelNavigation.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanelNavigation.Name = "flowLayoutPanelNavigation";
-            this.flowLayoutPanelNavigation.Size = new System.Drawing.Size(219, 793);
-            this.flowLayoutPanelNavigation.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,12 +557,12 @@ namespace Computer_MGS
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            this.flowLayoutPanelNavigation.ResumeLayout(false);
+            this.flowLayoutPanelNavigation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnSalesDropDown.ResumeLayout(false);
             this.pnPurchasesDropDown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
-            this.flowLayoutPanelNavigation.ResumeLayout(false);
-            this.flowLayoutPanelNavigation.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -594,8 +594,8 @@ namespace Computer_MGS
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.PictureBox pbMaximize;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblStaffUserType;
+        private System.Windows.Forms.Label lblStaffName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelNavigation;

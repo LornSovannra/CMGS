@@ -120,7 +120,7 @@ namespace Computer_MGS.Forms
                     {
                         string sql = "INSERT INTO tblPurchases(StaffID, SupplierID, PurchaseDate) VALUES(:2, :3, :4)";
                         OracleCommand insert_command = new OracleCommand(sql, conn);
-                        insert_command.Parameters.Add(new OracleParameter("2", /*Classes.UserLogin.getStaffID()*/"Admin"));
+                        insert_command.Parameters.Add(new OracleParameter("2", Classes.UserLogin.getStaffID()));
                         insert_command.Parameters.Add(new OracleParameter("3", Int32.Parse(SupplierID)));
                         insert_command.Parameters.Add(new OracleParameter("4", dtpPurchaseDate.Text));
 
@@ -169,7 +169,7 @@ namespace Computer_MGS.Forms
                     {
                         string sql = "UPDATE tblPurchases SET StaffID = :2, SupplierID = :3, PurchaseDate = :4 WHERE PurchaseID = :1";
                         OracleCommand update_command = new OracleCommand(sql, conn);
-                        update_command.Parameters.Add(new OracleParameter("2", /*Classes.UserLogin.getStaffID()*/"Admin"));
+                        update_command.Parameters.Add(new OracleParameter("2", Classes.UserLogin.getStaffID()));
                         update_command.Parameters.Add(new OracleParameter("3", SupplierID));
                         update_command.Parameters.Add(new OracleParameter("4", dtpPurchaseDate.Text));
                         update_command.Parameters.Add(new OracleParameter("1", Int32.Parse(txtPurchaseID.Text)));

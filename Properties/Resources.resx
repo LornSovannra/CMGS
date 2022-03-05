@@ -118,73 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="sale_32px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sale_32px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="subtract_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\subtract_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Close_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="staff_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\staff_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="collapse_arrow_32px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collapse_arrow_32px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="computer_default_photo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\computer_default_photo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sale_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sale_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expand_arrow_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\expand_arrow_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard_32_Newpx" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_32_Newpx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="full_screen_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_screen_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="collapse_arrow_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\collapse_arrow_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="supplier_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\supplier_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="member_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\member_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="category_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\category_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer MGS's Login Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Computer MGS's Login Banner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="purchase_order_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\purchase_order_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="collapse_arrow_32px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\collapse_arrow_32px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="collapse_arrow_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collapse_arrow_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="categorize_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\categorize_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashboard_32_Newpx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_32_Newpx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="price_tag_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\price_tag_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sale_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sale_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="laptop_computer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\laptop_computer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_shield_128px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_shield_128px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_shield_128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_shield_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="category_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\category_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="supplier_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\supplier_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="customer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="subtract_60px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subtract_60px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="full_screen_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\full_screen_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="categorize_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categorize_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="subtract_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subtract_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_shield_128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_shield_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sale_32px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sale_32px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laptop_computer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptop_computer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="price_tag_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\price_tag_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="member_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\member_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="computer_default_photo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer_default_photo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expand_arrow_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expand_arrow_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="invisible_24px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invisible_24px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="visible_24px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\visible_24px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

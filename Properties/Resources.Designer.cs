@@ -113,6 +113,16 @@ namespace Computer_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_64px1 {
+            get {
+                object obj = ResourceManager.GetObject("Close_64px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap collapse_arrow_32px {
             get {
                 object obj = ResourceManager.GetObject("collapse_arrow_32px", resourceCulture);
@@ -136,6 +146,16 @@ namespace Computer_MGS.Properties {
         internal static System.Drawing.Bitmap computer_default_photo {
             get {
                 object obj = ResourceManager.GetObject("computer_default_photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Computer_MGS_s_Login_Banner {
+            get {
+                object obj = ResourceManager.GetObject("Computer MGS\'s Login Banner", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +193,16 @@ namespace Computer_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_shield_128px1 {
+            get {
+                object obj = ResourceManager.GetObject("delete_shield_128px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap expand_arrow_32px {
             get {
                 object obj = ResourceManager.GetObject("expand_arrow_32px", resourceCulture);
@@ -186,6 +216,16 @@ namespace Computer_MGS.Properties {
         internal static System.Drawing.Bitmap full_screen_60px {
             get {
                 object obj = ResourceManager.GetObject("full_screen_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap invisible_24px_new {
+            get {
+                object obj = ResourceManager.GetObject("invisible_24px_new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +323,29 @@ namespace Computer_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap subtract_60px1 {
+            get {
+                object obj = ResourceManager.GetObject("subtract_60px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap supplier_32px {
             get {
                 object obj = ResourceManager.GetObject("supplier_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visible_24px_new {
+            get {
+                object obj = ResourceManager.GetObject("visible_24px_new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
