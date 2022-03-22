@@ -31,8 +31,8 @@ namespace Computer_MGS.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtComputer = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtSale = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -78,17 +78,6 @@ namespace Computer_MGS.Forms
             this.panel1.Size = new System.Drawing.Size(278, 119);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Computers";
-            // 
             // txtComputer
             // 
             this.txtComputer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(158)))), ((int)(((byte)(188)))));
@@ -101,6 +90,17 @@ namespace Computer_MGS.Forms
             this.txtComputer.TabIndex = 2;
             this.txtComputer.Text = "4000";
             this.txtComputer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(13, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Computers";
             // 
             // panel5
             // 
@@ -166,9 +166,9 @@ namespace Computer_MGS.Forms
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(13, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 24);
+            this.label8.Size = new System.Drawing.Size(99, 24);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Purchase";
+            this.label8.Text = "Purchases";
             // 
             // panel9
             // 

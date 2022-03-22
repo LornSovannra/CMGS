@@ -106,11 +106,11 @@ namespace Computer_MGS
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(252, 17);
+            this.label4.Location = new System.Drawing.Point(398, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(589, 31);
+            this.label4.Size = new System.Drawing.Size(421, 31);
             this.label4.TabIndex = 48;
-            this.label4.Text = "Computer Management System - Dashboard";
+            this.label4.Text = "Computer Management System";
             // 
             // lblStaffUserType
             // 
